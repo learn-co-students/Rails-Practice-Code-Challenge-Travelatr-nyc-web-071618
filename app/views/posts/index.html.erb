@@ -1,0 +1,7 @@
+<h1>IIINNNNNDDDDEEEEEEEEEXXXXXXXX</h1>
+
+<ul>
+  <% @posts.each do |pst| %>
+  <li><%= link_to pst.title, post_path(pst) %></li>
+  <% end %>
+</ul>
