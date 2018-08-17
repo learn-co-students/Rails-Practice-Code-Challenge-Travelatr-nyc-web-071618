@@ -1,0 +1,12 @@
+<h1><%= @destination.name + ', ' + @destination.country %></h1>
+
+<h3>The most recent posts for this destination are...</h3>
+<% @destination.five_most_recent.each do |post| %>
+  <p><%= post.title %></p>
+<% end %><br><br>
+
+<h3>This destination's most popular post is:</h3><br>
+<%= link_to @destination.featured_post.title, post_path(@destination.featured_post) %>
+
+<h3>Our average blogger age is:</h3>
+<%= @destination.average_age %>

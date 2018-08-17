@@ -1,0 +1,9 @@
+<h3>This is a sweet, sweet blogger: <%= @blogger.name %></h3><br><br>
+
+I have <%= @blogger.total_likes %> likes!<br><br>
+
+My most popular post is: <% if @most_liked_post == nil %>
+<%= "You don't have any posts! Get to writing!" %>
+<% else %>
+<%= link_to @most_liked_post.title, post_path(@most_liked_post) %>
+<% end %>

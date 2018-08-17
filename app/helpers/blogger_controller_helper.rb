@@ -1,0 +1,2 @@
+module BloggerControllerHelper
+end
